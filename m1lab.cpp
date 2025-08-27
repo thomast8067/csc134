@@ -27,7 +27,7 @@ int main() {
     // output quick maths
     cout << "Buying all of the doses will cost $" << total_cost << endl;
     cout << "Thanks for shopping with us!" << endl;
-    
+
     // ---end program---
     return 0;
 }
