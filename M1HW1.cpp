@@ -12,12 +12,20 @@ using namespace std;
 int main() {
     //---start program---
     // declaring variables
-    string movie_name  = "Knives Out";
+    string movie_name      = "Knives Out";
     int    year_of_release = 2019;
-    double box_office = 312.9;
+    double budget          = 40;
+    double box_office      = 312.9;
 
     // spiel
-    cout << movie_name << " is a murder mystery movie made by Ryan Johnson. It released in " << year_of_release << " and made $" << box_office << " million." << endl;
+    cout << movie_name << " is a murder mystery movie made by Ryan Johnson." << endl;
+    cout << "It released in " << year_of_release << " and made $" << box_office << " million." << endl;
+
+    // profit calculation
+    double profit = box_office - budget;
+
+    // spiel pt ii
+    cout << "With a budget of $" << budget << " million, that means the movie made $" << profit << " million in revenue." << endl;
 
     //---end program---
     return 0;
