@@ -10,7 +10,7 @@ How to extract wealth from the needy.
 using namespace std;
 
 int main() {
-    // start program
+    // ---start program---
     // declare all of our variables
     string item_name  = "insulin";
     int    item_count = 10;
@@ -21,9 +21,13 @@ int main() {
     cout << "Each " << item_name << " is $" << item_price << " per dose." << endl;
     cout << "We have " << item_count << " doses for sale." << endl;
 
-    // do the processing
+    // two plus two is four minus one thats three quick maths
     double total_cost = item_count * item_price;
+
+    // output quick maths
+    cout << "Buying all of the doses will cost $" << total_cost << endl;
+    cout << "Thanks for shopping with us!" << endl;
     
-    // end program
+    // ---end program---
     return 0;
 }
