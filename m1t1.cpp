@@ -10,7 +10,9 @@ First Program.
 using namespace std;
 
 int main() {
+    string foo = "puzzles";
+
     cout << "Hello, World!" << endl;
-    cout << "My foo is puzzles." << endl;
+    cout << "My foo is " << foo << "!" << endl;
     return 0;
 }
