@@ -18,7 +18,7 @@ int main() {
     double box_office      = 312.9;
 
     // spiel
-    cout << movie_name << " is a murder mystery movie made by Ryan Johnson." << endl;
+    cout << movie_name << " is a murder mystery movie made by Rian Johnson." << endl;
     cout << "It released in " << year_of_release << " and made $" << box_office << " million." << endl;
 
     // profit calculation
@@ -26,6 +26,7 @@ int main() {
 
     // spiel pt ii
     cout << "With a budget of $" << budget << " million, that means the movie made $" << profit << " million in revenue." << endl;
+    cout << "At some point in the movie that I do not rememeber off the top of my head, Benoit Blanc says \"The donut hole has a hole in its center,\" which out of context doesn't make sense lmao." << endl;
 
     //---end program---
     return 0;
