@@ -31,14 +31,12 @@ int main() {
     cin >> purchase_count;
 
     // processing
-    double total_cost = item_count * item_price;
+    double total_cost = purchase_count * item_price;
 
     // output processing
     cout << "You are buying " << purchase_count << " " << item_name << "." << endl;
-/*
-    cout << "Buying all of the doses will cost $" << total_cost << endl;
+    cout << "The total cost is $" << total_cost << "." << endl;
     cout << "Thanks for shopping with us!" << endl;
-*/
 
     // ---end program---
     return 0;
