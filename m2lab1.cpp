@@ -11,22 +11,38 @@ using namespace std;
 
 int main(){
 
-    double length, width, height;
-    double production_cost, customer_cost;
+    double length, width, height; // size of crate
+    double volume;
+    double production_cost, charge_to_customer; //pricing
     double profit;
 
     const double COST_PER_CUBIC_FOOT = 0.23;
     const double CHARGE_PER_CUBIC_FOOT = .5;
 
-    // Ask the user to input the crate’s length.
-// Ask the user to input the crate’s width.
-// Ask the user to input the crate’s height.
-// Calculate the crate’s volume.
-// Calculate the cost of building the crate.
-// Calculate the customer’s charge for the crate.
-// Calculate the profit made from the crate.
-// Display the crate’s volume.
-// Display the cost of building the crate.
-// Display the customer’s charge for the crate.
-// Display the profit made from the crate.
+    // Intro
+    cout << "Welcome to the crate pricing program!" << endl;
+    cout << "Pleas input the dimensions of the crate." << endl;
+    
+    // Gather dimensions
+    cout << "Length: ";
+    cin >> length;
+    cout << "Width: ";
+    cin >> width;
+    cout << "Height: ";
+    cin >> height;
+
+    // Calculate prices and volume
+    volume = length * width * height;
+    production_cost = volume * COST_PER_CUBIC_FOOT;
+    charge_to_customer = volume * CHARGE_PER_CUBIC_FOOT;
+    profit = charge_to_customer - production_cost;
+
+    // Display results
+    cout << endl;
+    cout << "Your crate is " << volume << " cubic feet." << endl;
+    cout << "Customer Price....: $" << charge_to_customer << endl;
+    cout << "Cost to produce...: $" << production_cost << endl;
+    cout << "Profit............: $" << profit << endl;
+    
+    return 0;
 }
