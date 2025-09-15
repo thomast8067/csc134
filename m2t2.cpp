@@ -7,6 +7,7 @@ For the entrepreneur in you.
 */
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main() {
@@ -17,17 +18,16 @@ int main() {
     double tax_rate   = 0.08;
 
     // start receipt
-    cout << "Thank you for purchasing a " << item_name << "!" << endl;
-    cout << "The price of the $" << item_name << " is $" << item_price << "." << endl;
+    cout << "The price of the " << item_name << " is $" << item_price << "." << endl;
 
     // processing
-    double tax_price = item_price * tax_rate;
+    double tax_price = round(item_price * tax_rate * 100) / 100;
     double total_cost = tax_price + item_price;
 
     // output processing
-    cout << "The tax is " << tax_price << "." << endl;
+    cout << "The tax is $" << tax_price << "." << endl;
     cout << "The total cost is $" << total_cost << "." << endl;
-    cout << "Thanks for shopping with us!" << endl;
+    cout << "Thank you for shopping with us!" << endl;
 
     // ---end program---
     return 0;
