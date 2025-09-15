@@ -7,6 +7,7 @@ GO FOR THE GOLD NUMERO UNO LETS GOOOOOOOOOOOOO
 */
 
 #include <iostream>
+#include <iomanip>  // for setprecision()
 using namespace std;
 
 void question1() {
