@@ -12,29 +12,20 @@ using namespace std;
 int main() {
     // ---start program---
     // declare static variables
-    string item_name  = "insulin";
-    int    item_count = 10;
-    double item_price = 832.17;
+    string item_name  = "sandwich";
+    double item_price = 5.99;
+    double tax_rate   = 0.08;
 
-    // variables for user input
-    int purchase_count;
-    int purchase_price;
-
-    // give sales pitch
-    cout << "Welcome to the " << item_name << " store!" << endl;
-    cout << "Each " << item_name << " is $" << item_price << " per dose." << endl;
-    cout << "We have " << item_count << " doses for sale." << endl;
-    cout << endl;
-    cout << "How many would you like to buy?" << endl;
-
-    // user input
-    cin >> purchase_count;
+    // start receipt
+    cout << "Thank you for purchasing a " << item_name << "!" << endl;
+    cout << "The price of the $" << item_name << " is $" << item_price << "." << endl;
 
     // processing
-    double total_cost = purchase_count * item_price;
+    double tax_price = item_price * tax_rate;
+    double total_cost = tax_price + item_price;
 
     // output processing
-    cout << "You are buying " << purchase_count << " " << item_name << "." << endl;
+    cout << "The tax is " << tax_price << "." << endl;
     cout << "The total cost is $" << total_cost << "." << endl;
     cout << "Thanks for shopping with us!" << endl;
 
