@@ -11,7 +11,25 @@ GO FOR THE GOLD NUMERO UNO LETS GOOOOOOOOOOOOO
 using namespace std;
 
 void question1() {
-    cout << "Question 1" << endl;
+    //define vars
+    string username;
+    double balance;
+    double deposit;
+    double withdraw;
+
+    cout << "Welcome to the bank!" << endl;
+    cout << "Please input your name: ";
+    cin >> username;
+    cout << "Input your account balance: ";
+    cin >> balance;
+    cout << "Input how much you would like to deposit: " ;
+    cin >> deposit;
+    cout << "Input how much you would like to withdraw: ";
+    cin >> withdraw;
+
+    //calc time
+    int account_number
+
 }
 
 void question2() {
