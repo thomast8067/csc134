@@ -42,7 +42,40 @@ void question1() {
 }
 
 void question2() {
-    cout << "Question 2" << endl;
+    //define vars
+    double length, width, height;
+    double volume;
+    double production_cost, charge_to_customer;
+    double profit;
+
+    const double COST_PER_CUBIC_FOOT = 0.3;
+    const double CHARGE_PER_CUBIC_FOOT = .52;
+
+    // Intro
+    cout << "Welcome to the crate pricing program!" << endl;
+    cout << "Pleas input the dimensions of the crate." << endl;
+    
+    // Gather dimensions
+    cout << "Length: ";
+    cin >> length;
+    cout << "Width: ";
+    cin >> width;
+    cout << "Height: ";
+    cin >> height;
+
+    // Calculate prices and volume
+    volume = length * width * height;
+    production_cost = volume * COST_PER_CUBIC_FOOT;
+    charge_to_customer = volume * CHARGE_PER_CUBIC_FOOT;
+    profit = charge_to_customer - production_cost;
+
+    // Display results
+    cout << endl;
+    cout << "Your crate is " << volume << " cubic feet." << endl;
+    cout << setprecision(2) << fixed;
+    cout << "Customer Price:\t\t$" << charge_to_customer << endl;
+    cout << "Cost to produce:\t$" << production_cost << endl;
+    cout << "Profit:\t\t\t$" << profit << endl;
 }
 
 void question3() {
@@ -56,7 +89,7 @@ void question4() {
 int main(){
     // call each question as its own function
 
-    question1();
+    
     question2();
     question3();
     question4();
