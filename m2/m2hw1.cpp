@@ -26,9 +26,18 @@ void question1() {
     cin >> deposit;
     cout << "Input how much you would like to withdraw: ";
     cin >> withdraw;
+    cout << endl;
 
     //calc time
-    int account_number
+    int account_number = rand();
+    double new_balance = balance + deposit - withdraw;
+
+    cout << setprecision(2) << fixed;
+    cout << "Thank you! Here are your bank details:" << endl;
+    cout << "NAME:\t\t\t" << username << endl;
+    cout << "ACCOUNT NO.:\t\t" << account_number << endl;
+    cout << "CURRENT BALANCE:\t$" << new_balance << endl;
+    cout << "Thank you for banking with us!" << endl;
 
 }
 
