@@ -79,7 +79,24 @@ void question2() {
 }
 
 void question3() {
-    cout << "Question 3" << endl;
+    //define vars
+    int guests;
+    int pizzas;
+    int slices_per;
+
+    cout << "How many guests are attending your party?";
+    cin >> guests;
+    cout << "How many pizzas do you have?";
+    cin >> pizzas;
+    cout << "How many slices is each pizza cut into?";
+    cin >> slices_per;
+
+    //calc time
+    int total_slices = pizzas * slices_per;
+    int wanted_slices = guests * 3;
+    int leftover = total_slices - wanted_slices;
+
+    cout << "You will be left with " << leftover << "slice(s) of pizza.";
 }
 
 void question4() {
@@ -88,9 +105,8 @@ void question4() {
 
 int main(){
     // call each question as its own function
-
-    
-    question2();
+    //question1();
+    //question2();
     question3();
     question4();
     return 0;
