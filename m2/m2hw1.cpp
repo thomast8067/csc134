@@ -100,14 +100,25 @@ void question3() {
 }
 
 void question4() {
-    cout << "Question 4" << endl;
+    //define vars
+    string lets_go   = "Let's go ";
+    string school    = "FTCC";
+    string team      = "Trojans";
+    string cheer_one = lets_go + school;
+    string cheer_two = lets_go + team;
+
+    cout << cheer_one << endl;
+    cout << cheer_one << endl;
+    cout << cheer_one << endl;
+    cout << cheer_two << endl;
+
 }
 
 int main(){
     // call each question as its own function
     //question1();
     //question2();
-    question3();
+    //question3();
     question4();
     return 0;
 }
