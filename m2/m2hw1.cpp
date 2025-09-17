@@ -29,6 +29,7 @@ void question1() {
     cout << endl;
 
     //calc time
+    srand(time(0));
     int account_number = rand();
     double new_balance = balance + deposit - withdraw;
 
@@ -116,9 +117,12 @@ void question4() {
 
 int main(){
     // call each question as its own function
-    //question1();
-    //question2();
-    //question3();
+    question1();
+    cout << "\n" << "---------------------------------------------------------------------------------" << "\n" << endl;
+    question2();
+    cout << "\n" << "---------------------------------------------------------------------------------" << "\n" << endl;
+    question3();
+    cout << "\n" << "---------------------------------------------------------------------------------" << "\n" << endl;
     question4();
     return 0;
 }
