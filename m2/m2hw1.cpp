@@ -19,7 +19,7 @@ void question1() {
 
     cout << "Welcome to the bank!" << endl;
     cout << "Please input your name: ";
-    cin >> username;
+    getline(cin,username);
     cout << "Input your account balance: ";
     cin >> balance;
     cout << "Input how much you would like to deposit: " ;
@@ -35,7 +35,7 @@ void question1() {
     cout << setprecision(2) << fixed;
     cout << "Thank you! Here are your bank details:" << endl;
     cout << "NAME:\t\t\t" << username << endl;
-    cout << "ACCOUNT NO.:\t\t" << account_number << endl;
+    cout << "ACCOUNT NUMBER:\t\t" << account_number << endl;
     cout << "CURRENT BALANCE:\t$" << new_balance << endl;
     cout << "Thank you for banking with us!" << endl;
 
