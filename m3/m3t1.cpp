@@ -25,11 +25,23 @@ int main() {
     cin >> width2;
     cout << endl;
 
-    double area1 = length1 * width2;
+    double area1 = length1 * width1;
     double area2 = length2 * width2;
 
     cout << "The area of the first rectangle is: " << area1 << endl;
     cout << "The area of the second rectangle is: " << area2 << endl;
+
+    if (area1 > area2){
+        cout << "The first rectangle is bigger than the second rectangle." << endl;
+    }
+
+    if (area2 > area1){
+        cout << "The second rectangle is bigger than the first rectangle." << endl;
+    }
+
+    if (area1 == area2){
+        cout << "The two rectangles are the same area." << endl;
+    }
 
     return 0;
 }
