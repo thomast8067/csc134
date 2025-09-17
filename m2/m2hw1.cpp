@@ -84,11 +84,11 @@ void question3() {
     int pizzas;
     int slices_per;
 
-    cout << "How many guests are attending your party?";
+    cout << "How many guests are attending your party? ";
     cin >> guests;
-    cout << "How many pizzas do you have?";
+    cout << "How many pizzas do you have? ";
     cin >> pizzas;
-    cout << "How many slices is each pizza cut into?";
+    cout << "How many slices is each pizza cut into? ";
     cin >> slices_per;
 
     //calc time
@@ -96,7 +96,7 @@ void question3() {
     int wanted_slices = guests * 3;
     int leftover = total_slices - wanted_slices;
 
-    cout << "You will be left with " << leftover << "slice(s) of pizza.";
+    cout << "You will be left with " << leftover << " slice(s) of pizza." << endl;
 }
 
 void question4() {
