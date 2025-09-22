@@ -39,12 +39,19 @@ int main() {
     cout << "Roll 2: " << roll2 << endl;
     cout << "Total: " << sum << endl;
 
-    if (sum==7) {
-        cout << "Lucky seven -- You win!" << endl;
+    // win on 7 or 11
+    if (sum==7 || sum == 11) {
+        cout << "Seven or Eleven - You win!" << endl;
     }
+
+    // lose on 2, 3, 12
+    else if (sum==2 || sum == 3 || sum == 12){
+        cout << "Two, Three, or Twelve - Sorry, you lose.";
+    } 
+
     else {
         point = sum;
-        cout << "Did not roll a seven." << endl;
+        cout << "You rolled a point." << endl;
         cout << "Your point is: " << point << endl;
     }
 
