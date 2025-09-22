@@ -1,11 +1,26 @@
+/*
+CSC 134
+M3T2 - Craps simulator
+T Thomas
+9/22/25
+90% of gamblers quit before they win big.
+*/
+
 #include <iostream>
-#include <stdlib.h>
-#include <time>
+#include <cstdlib>
+#include <ctime>
 
-int main{ 
-    srand(time(0))
+using namespace std;
 
-    int number1 = (rand()% 6 ) + 1;
+int roll();
 
+int main() {
+    int num = roll();
+    cout << roll() << endl;
     return 0;
+}
+
+int roll() {
+
+    return 6;
 }
