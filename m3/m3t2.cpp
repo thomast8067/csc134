@@ -7,8 +7,8 @@ T Thomas
 */
 
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
+#include <cstdlib>  //for rand() and srand()
+#include <ctime>    //for time()
 
 using namespace std;
 
@@ -17,21 +17,16 @@ int roll();
 int main() {
     int num = roll();
     cout << roll() << endl;
-   
-    // Main cycle
-    /*
-    roll 2d6
-    branch if win, lose, or points
-    rest comes later
-    */
 
     int roll1;
     int roll2;
     int point;  // roll if it doesn't immediately win/lose
 
-    cout << "Enter two dice (press ENTER between)";
-    cin >> roll1;
-    cin >> roll2;
+    //seed rand before rolling
+    srand(time(0));
+
+    roll1 = roll();
+    roll2 = roll();
     
     int sum = roll1 + roll2;
 
@@ -46,7 +41,7 @@ int main() {
 
     // lose on 2, 3, 12
     else if (sum==2 || sum == 3 || sum == 12){
-        cout << "Two, Three, or Twelve - Sorry, you lose.";
+        cout << "Two, Three, or Twelve - Sorry, you lose." << endl;
     } 
 
     else {
@@ -59,6 +54,7 @@ int main() {
 }
 
 int roll() {
-
-    return 6;
+    int die;
+    die = rand() % 6 + 1;
+    return die;    
 }
