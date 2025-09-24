@@ -7,6 +7,7 @@ T Thomas
 */
 
 #include <iostream>
+#include <unistd.h>
 using namespace std;
 
 void prison(); //start
@@ -25,9 +26,9 @@ int main() {
     cout << "You are in prison, sitting on your very bad mattress counting the bricks in the wall. \nBut, in the back of your head you're plotting your epic escape that's due to happen any second now... now what was the first step again?" << endl;
     prison();
 
-    cout << "=============" << endl;
-    cout << "   THE END   " << endl;
-    cout << "=============" << endl;
+    cout << "===============" << endl;
+    cout << "   GAME OVER   " << endl;
+    cout << "===============" << endl;
     cout << endl;
     
     return 0;
@@ -58,7 +59,16 @@ void prison() {
 }
 
 void prison_wait() {
-    cout << "wait";
+    cout << "Ah yes, good things come to those who wait after all!" << endl;
+    sleep(1);
+    cout << "." << endl;
+    sleep(1);
+    cout << "." << endl;
+    sleep(1);
+    cout << "." << endl;
+    sleep(1);
+    cout << "...Okay this is boring, maybe next time choose a better option." << endl;
+
 }
 
 void prison_lure() {
