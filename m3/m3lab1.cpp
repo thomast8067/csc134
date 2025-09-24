@@ -11,6 +11,7 @@ T Thomas
 using namespace std;
 
 void prison(); //start
+void failure(); //lose condition
 void prison_wait();
 void prison_lure();
 void prison_breakbars();
@@ -25,11 +26,6 @@ int main() {
 
     cout << "You are in prison, sitting on your very bad mattress counting the bricks in the wall. \nBut, in the back of your head you're plotting your epic escape that's due to happen any second now... now what was the first step again?" << endl;
     prison();
-
-    cout << "===============" << endl;
-    cout << "   GAME OVER   " << endl;
-    cout << "===============" << endl;
-    cout << endl;
     
     return 0;
 }
@@ -68,7 +64,7 @@ void prison_wait() {
     cout << "." << endl;
     sleep(1);
     cout << "...Okay this is boring, maybe next time choose a better option." << endl;
-
+    failure();
 }
 
 void prison_lure() {
@@ -81,4 +77,11 @@ void prison_breakbars() {
 
 void prison_package() {
     cout << "package";
+}
+
+void failure() {
+    cout << "=============" << endl;
+    cout << "   FAILURE   " << endl;
+    cout << "=============" << endl;
+    cout << endl;
 }
