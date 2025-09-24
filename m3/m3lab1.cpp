@@ -10,6 +10,10 @@ T Thomas
 using namespace std;
 
 void prison(); //start
+void prison_wait();
+void prison_lure();
+void prison_breakbars();
+void prison_package();
 
 
 int main() {
@@ -30,6 +34,41 @@ int main() {
 }
 
 void prison() {
+    cout << "Select an option with 1-4" << endl;
+    cout << "1: Bide your time" << endl;
+    cout << "2: Lure a guard to your cell" << endl;
+    cout << "3: Break the bars with your brute stregth" << endl;
+    cout << "4: Get a package delivered" << endl;
     
+    int decision;
+    cin >> decision;
 
+    if (decision == 1) {
+        prison_wait();
+    }
+    else if (decision == 2) {
+        prison_lure();
+    }
+    else if (decision == 3) {
+        prison_breakbars();
+    }
+    else if (decision == 4) {
+        prison_package();
+    }
+}
+
+void prison_wait() {
+    cout << "wait";
+}
+
+void prison_lure() {
+    cout << "lure";
+}
+
+void prison_breakbars() {
+    cout << "breakbars";
+}
+
+void prison_package() {
+    cout << "package";
 }
