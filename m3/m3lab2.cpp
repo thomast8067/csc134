@@ -1,9 +1,9 @@
 /*
 CSC 134
-M3LAB2 - Letter Grades
+M3LAB2 - Grades & Goblins
 T Thomas
 9/29/25
-
+Intellectual imps
 */
 
 #include <iostream>
