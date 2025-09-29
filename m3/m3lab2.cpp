@@ -14,6 +14,7 @@ using namespace std;
 
 void letter_grader();
 void combat();
+int roll();
 
 int main() {
 
@@ -62,15 +63,16 @@ void letter_grader() {
 void combat() {
 
     int attack_roll, attack_bonus, enemy_armor;
+    srand(time(0)); 
 
     cout << "You are fighting a goblin." <<endl;
-    cout << "Enter your roll: ";
-    cin >> attack_roll;
     cout << "Enter attack bonus: ";
     cin >> attack_bonus;
     cout << "Enemy armor class: ";
     cin >> enemy_armor;
 
+    attack_roll = roll();
+    cout << "Roll: " << attack_roll << " + " << attack_bonus << " = " << attack_roll + attack_bonus << endl;
     if (attack_roll + attack_bonus >= enemy_armor) {
         cout << "Hit!" << endl;
     }
@@ -84,4 +86,11 @@ void combat() {
     if (again == "y"){
         combat();
     }
+}
+
+int roll() {
+    const int SIDES = 20;
+    int my_roll;
+    my_roll = (rand() % SIDES) + 1;
+    return my_roll;
 }
