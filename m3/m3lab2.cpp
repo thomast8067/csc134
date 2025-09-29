@@ -27,11 +27,34 @@ void letter_grader() {
     double number_grade;
     string letter_grade;
 
+    const double A_GRADE = 90;
+    const double B_GRADE = 80;
+    const double C_GRADE = 70;
+    const double D_GRADE = 60;
+
     cout << "Enter a number grade from 0-100:" << endl;
     cin >> number_grade;
 
-    letter_grade = "A";
+    if (number_grade >= A_GRADE){
+        letter_grade = "A";
+    }
 
-    cout << "A number grade of " << number_grade << " is a(n) " << letter_grade << "." << endl;
+    else if (number_grade >= B_GRADE){
+        letter_grade = "B";
+    }
+
+    else if (number_grade >= C_GRADE){
+        letter_grade = "C";
+    }
+
+    else if (number_grade >= D_GRADE){
+        letter_grade = "D";
+    }
+
+    else {
+        letter_grade = "F";
+    }
+
+    cout << "A number grade of " << number_grade << " is: " << letter_grade << endl;
 
 }
