@@ -12,13 +12,15 @@ Making bacon.
 
 using namespace std;
 
-
 int roll();
 int turn();
 
+int game_score;
+int turn_score;
+
 int main() {
-    int game_score;
-    int turn_score;
+    int game_score = 0;
+    int turn_score = 0;
     
     turn();
     return 0;
@@ -28,7 +30,6 @@ int turn() {
     //define variables
     int pig1;
     int pig2;
-    int turn_score;
     bool pig_out;
 
     srand(time(0));
@@ -42,8 +43,6 @@ int turn() {
     pig2 = roll();
     cout << endl;
 
-    turn_score = 0;
-
     if ((pig1 * pig2) == 6){
         cout << "Pig out!\nYour score is now 0 and your turn ends." << endl;
         turn_score = 0;
@@ -55,8 +54,24 @@ int turn() {
         turn_score = turn_score + 1;
     }
 
-    else {
-        turn_score = turn_score + pig1 + pig2;
+    else if ((pig1 * pig2) == 10|(pig1 * pig2) == 15){
+        cout << "Razorback!\nYou score 5 points." << endl;
+        turn_score = turn_score + 5;
+    }
+
+    else if ((pig1 * pig2) == 14|(pig1 * pig2) == 21){
+        cout << "Trotter!\nYou score 5 points." << endl;
+        turn_score = turn_score + 5;
+    }
+
+    else if ((pig1 * pig2) == 22|(pig1 * pig2) == 33){
+        cout << "Snouter!\nYou score 10 points." << endl;
+        turn_score = turn_score + 10;
+    }
+
+    else if ((pig1 * pig2) == 26|(pig1 * pig2) == 39){
+        cout << "Leaning Jowler!\nYou score 15 points." << endl;
+        turn_score = turn_score + 15;
     }
     
     cout << turn_score << endl;
