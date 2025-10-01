@@ -29,8 +29,10 @@ int turn() {
     int pig1;
     int pig2;
     int turn_score;
+    bool pig_out;
 
     srand(time(0));
+    pig_out = false;
 
     cout << "The first pig is a ";
     pig1 = roll();
@@ -45,13 +47,28 @@ int turn() {
     if ((pig1 * pig2) == 6){
         cout << "Pig out!\nYour score is now 0 and your turn ends." << endl;
         turn_score = 0;
+        pig_out = true;
+    }
+
+    else if ((pig1 * pig2) == 4|(pig1 * pig2) == 9){
+        cout << "Sider!\nYou score 1 point." << endl;
+        turn_score = turn_score + 1;
     }
 
     else {
-        turn_score = pig1 + pig2;
+        turn_score = turn_score + pig1 + pig2;
     }
     
-    cout << turn_score;
+    cout << turn_score << endl;
+
+    if (pig_out == false) {
+        cout << "Do you want to roll again? (Y/N)" << endl;
+        string again;
+        cin >> again;
+        if (again == "Y") {
+            turn();
+        }
+    }
     return turn_score;
 }
 
