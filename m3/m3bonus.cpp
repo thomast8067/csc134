@@ -14,20 +14,45 @@ using namespace std;
 
 
 int roll();
+int turn();
 
 int main() {
+    int game_score;
+    int turn_score;
+    
+    turn();
+    return 0;
+}
+
+int turn() {
     //define variables
     int pig1;
     int pig2;
+    int turn_score;
 
     srand(time(0));
 
+    cout << "The first pig is a ";
     pig1 = roll();
-    pig2 = roll();
+    cout << endl;
 
-    cout << pig1 << "\n" << pig2 << endl;
+    cout << "The second pig is a ";
+    pig2 = roll();
+    cout << endl;
+
+    turn_score = 0;
+
+    if ((pig1 * pig2) == 6){
+        cout << "Pig out!\nYour score is now 0 and your turn ends." << endl;
+        turn_score = 0;
+    }
+
+    else {
+        turn_score = pig1 + pig2;
+    }
     
-    return 0;
+    cout << turn_score;
+    return turn_score;
 }
 
 int roll() {
@@ -59,26 +84,32 @@ int roll() {
 
     if (pig_roll <= LEANING_JOWLER){
         pig_value = 13;
+        cout << "leaning jowler.";
     }
 
     else if (pig_roll <= SNOUTER){
         pig_value = 11;
+        cout << "snouter.";
     }
 
     else if (pig_roll <= TROTTER){
         pig_value = 7;
+        cout << "trotter.";
     }
 
     else if (pig_roll <= RAZORBACK){
         pig_value = 5;
+        cout << "razorback.";
     }
 
     else if (pig_roll <= SIDE_DOT){
         pig_value = 3;
+        cout << "side (dot).";
     }
 
     else if (pig_roll <= SIDE_NO_DOT){
         pig_value = 2;
+        cout << "side (no dot).";
     }
 
     return pig_value;
