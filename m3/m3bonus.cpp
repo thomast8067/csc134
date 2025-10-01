@@ -59,9 +59,19 @@ int turn() {
         turn_score = turn_score + 5;
     }
 
+    else if ((pig1 * pig2) == 25){
+        cout << "Double Razorback!\nYou score 20 points." << endl;
+        turn_score = turn_score + 20;
+    }
+
     else if ((pig1 * pig2) == 14|(pig1 * pig2) == 21){
         cout << "Trotter!\nYou score 5 points." << endl;
         turn_score = turn_score + 5;
+    }
+
+    else if ((pig1 * pig2) == 49){
+        cout << "Double Trotter!\nYou score 20 points." << endl;
+        turn_score = turn_score + 20;
     }
 
     else if ((pig1 * pig2) == 22|(pig1 * pig2) == 33){
@@ -69,10 +79,21 @@ int turn() {
         turn_score = turn_score + 10;
     }
 
+    else if ((pig1 * pig2) == 121){
+        cout << "Double Snouter!\nYou score 40 points." << endl;
+        turn_score = turn_score + 40;
+    }
+
     else if ((pig1 * pig2) == 26|(pig1 * pig2) == 39){
         cout << "Leaning Jowler!\nYou score 15 points." << endl;
         turn_score = turn_score + 15;
     }
+
+    else if ((pig1 * pig2) == 169){
+        cout << "Double Leaning Jowler!!!!!\nYou score 60 points." << endl;
+        turn_score = turn_score + 60;
+    }
+
     
     cout << turn_score << endl;
 
@@ -80,7 +101,7 @@ int turn() {
         cout << "Do you want to roll again? (Y/N)" << endl;
         string again;
         cin >> again;
-        if (again == "Y") {
+        if (again == "Y"|again == "y") {
             turn();
         }
     }
