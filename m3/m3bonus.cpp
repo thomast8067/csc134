@@ -134,6 +134,7 @@ int roll() {
     int pig_value;
 
     // all pig values are prime numbers so we can leverage the fundamental theorem of arithmetic later
+    // this is probably a very bad way to do this
 
     if (pig_roll <= LEANING_JOWLER){
         pig_value = 13;
