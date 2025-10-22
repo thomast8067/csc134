@@ -14,11 +14,15 @@ int main(){
     const int MIN_NUMBER = 1;
     const int MAX_NUMBER = 12;
     int num = MIN_NUMBER;
+    int factor;
+
+    cout << "Enter a number from 1 to 12?" << endl;
+    cin >> factor;
 
     while (num <= MAX_NUMBER)
     {
-        int product = 5 * num; 
-        cout << "5 times " << num << " equals " << product << "." << endl;
+        int product = factor * num; 
+        cout << factor << " times " << num << " is " << product << "." << endl;
         num++;
     }
 }
