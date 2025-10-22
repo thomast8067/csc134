@@ -16,8 +16,13 @@ int main(){
     int num = MIN_NUMBER;
     int factor;
 
-    cout << "Enter a number from 1 to 12?" << endl;
-    cin >> factor;
+    cout << "Enter a number from 1 to 12: ";
+    
+    while (!(cin >> factor) || factor < 1 || factor > 12) {
+        cout << "Invalid input. Try again: ";
+        cin.clear(); // Reset input errors
+        cin.ignore(10000, '\n'); // Remove bad input
+    }
 
     while (num <= MAX_NUMBER)
     {
