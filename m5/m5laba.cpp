@@ -27,6 +27,8 @@ void health_regen(){
     int white_bars;
     int black_bars;
 
+    cout << "Resting until healed..." << endl;
+
     while(health <= max_health){
         cout << "Health: " << health << "/" << max_health << "\t" ;
         
@@ -47,4 +49,6 @@ void health_regen(){
         
         health += HEALING;
     }
+
+    cout << "Fully rested" << endl;
 }
