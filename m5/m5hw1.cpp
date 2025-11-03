@@ -55,7 +55,50 @@ void question2() {
 }
 
 void question3() {
-    cout << "3";
+    
+    int number;
+
+    cout << "Enter a number from 1-10: ";
+    cin >> number;
+    
+    cout << "The roman numeral version of " << number << " is ";
+
+    switch(number){
+        case 1:
+            cout << "I";
+            break;
+        case 2:
+            cout << "II";
+            break;
+        case 3:
+            cout << "III";
+            break;
+        case 4:
+            cout << "IV";
+            break;
+        case 5:
+            cout << "V";
+            break;
+        case 6:
+            cout << "VI";
+            break;
+        case 7:
+            cout << "VII";
+            break;
+        case 8:
+            cout << "VIII";
+            break;
+        case 9:
+            cout << "IX";
+            break;
+        case 10:
+            cout << "X";
+            break;
+    }
+
+    cout << endl;
+    
+    return;
 }
 
 void question4() {
