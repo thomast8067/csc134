@@ -59,7 +59,12 @@ void question3() {
     int number;
 
     cout << "Enter a number from 1-10: ";
-    cin >> number;
+    
+    while (!(cin >> number) || number < 1 || number > 10) {
+        cout << "Invalid input. Try again: ";
+        cin.clear(); // Reset input errors
+        cin.ignore(10000, '\n'); // Remove bad input
+    }
     
     cout << "The roman numeral version of " << number << " is ";
 
@@ -96,7 +101,7 @@ void question3() {
             break;
     }
 
-    cout << endl;
+    cout << "." << endl;
     
     return;
 }
