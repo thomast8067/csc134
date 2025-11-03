@@ -18,13 +18,14 @@ void question5();
 int main(){
 
     int question_number;
+    bool exit;
 
     cout << "Question 1: Rainfall Average" << endl;
     cout << "Question 2: Cuboid Calculator" << endl;
     cout << "Question 3: Roman Numeral Convertor" << endl;
     cout << "Question 4: Geometry Calculator" << endl;
     cout << "Question 5: Distance Traveled" << endl;
-    cout << "Select a question: ";
+    cout << "Select a question, or enter 6 to exit: ";
     cin >> question_number;
 
     switch(question_number){
@@ -42,6 +43,9 @@ int main(){
             break;
         case 5:
             question5();
+            break;
+        case 6:
+            exit = true;
             break;
     }
 }
