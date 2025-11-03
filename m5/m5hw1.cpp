@@ -20,33 +20,42 @@ int main(){
     int question_number;
     bool exit;
 
-    cout << "Question 1: Rainfall Average" << endl;
-    cout << "Question 2: Cuboid Calculator" << endl;
-    cout << "Question 3: Roman Numeral Convertor" << endl;
-    cout << "Question 4: Geometry Calculator" << endl;
-    cout << "Question 5: Distance Traveled" << endl;
-    cout << "Select a question, or enter 6 to exit: ";
-    cin >> question_number;
+    exit = false;
 
-    switch(question_number){
-        case 1:
-            question1();
-            break;
-        case 2:
-            question2();
-            break;
-        case 3:
-            question3();
-            break;
-        case 4:
-            question4();
-            break;
-        case 5:
-            question5();
-            break;
-        case 6:
-            exit = true;
-            break;
+    while(exit == false){
+        cout << "Question 1: Rainfall Average" << endl;
+        cout << "Question 2: Cuboid Calculator" << endl;
+        cout << "Question 3: Roman Numeral Convertor" << endl;
+        cout << "Question 4: Geometry Calculator" << endl;
+        cout << "Question 5: Distance Traveled" << endl;
+        cout << "Select a question, or enter 6 to exit: ";
+        
+        while (!(cin >> question_number) || question_number < 1 || question_number > 6) {
+            cout << "Invalid input. Try again: ";
+            cin.clear(); // Reset input errors
+            cin.ignore(10000, '\n'); // Remove bad input
+        }
+
+        switch(question_number){
+            case 1:
+                question1();
+                break;
+            case 2:
+                question2();
+                break;
+            case 3:
+                question3();
+                break;
+            case 4:
+                question4();
+                break;
+            case 5:
+                question5();
+                break;
+            case 6:
+                exit = true;
+                break;
+        }
     }
 }
 
