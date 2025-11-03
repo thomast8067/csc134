@@ -29,6 +29,11 @@ displayData - This function should take three arguments, length, width, and area
 // getWidth, getArea, and displayData
 // functions here.
 
+double  getLength();
+double  getWidth();
+double  getArea(double length, double width);
+void    displayData(double length, double width, double area);
+
 int main()
 {
 	// This program calculates the area of a rectangle.
@@ -42,10 +47,10 @@ int main()
    length = getLength();
    
    // Get the rectangle's width.
-   width = getWidth()
+   width = getWidth();
    
    // Get the rectangle's area.
-   are = getArea();
+   area = getArea();
    
    // Display the rectangle's data.
    displayData(length, width, area);
@@ -57,3 +62,22 @@ int main()
 // TODO: write the getLength, getWidth, getArea,    *
 // and displayData functions below.                 *
 //***************************************************
+
+double  getLength(){
+    cout << "Not implemented." << endl;
+    return 0.0;
+}
+
+double  getWidth(){
+    cout << "Not implemented." << endl;
+    return 0.0;
+}
+
+double  getArea(double length, double width){
+    cout << "Not implemented." << endl;
+    return 0.0;
+}
+
+void    displayData(double length, double width, double area){
+    cout << "Todo: display data" << endl;
+}
