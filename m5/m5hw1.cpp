@@ -51,7 +51,36 @@ void question1() {
 }
 
 void question2() {
-    cout << "2";
+
+    double  length,
+            width,
+            height,
+            volume;
+    
+    cout << "Enter length: ";
+    while (!(cin >> length) || length < 0) {
+        cout << "Invalid input. Try again: ";
+        cin.clear(); // Reset input errors
+        cin.ignore(10000, '\n'); // Remove bad input
+    }
+
+    cout << "Enter width: ";
+    while (!(cin >> width) || width < 0) {
+        cout << "Invalid input. Try again: ";
+        cin.clear(); // Reset input errors
+        cin.ignore(10000, '\n'); // Remove bad input
+    }
+
+    cout << "Enter height: ";
+    while (!(cin >> height) || height < 0) {
+        cout << "Invalid input. Try again: ";
+        cin.clear(); // Reset input errors
+        cin.ignore(10000, '\n'); // Remove bad input
+    }
+
+    volume = length * width * height;
+
+    cout << "The volume of the cuboid is " << volume << "." << endl;
 }
 
 void question3() {
