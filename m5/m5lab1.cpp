@@ -149,7 +149,8 @@ The spit still hurt your feelings though.)" << endl;
 }
 
 void cakeBombs(){
-    cout << "hi";
+    cout << R"(You pull a bomb out of the cake, finally some real power!
+Where should you place it?)";
 };
 
 void cakePhone(){
@@ -161,5 +162,7 @@ Great.)" << endl;
 };
 
 void cakeKey(){
-    cout << "hi";
+    cout << R"(You pull the skeleton key out of the cake.
+You wait until lights out then you make your move, reaching around the bars and opening the cell.
+With your newfound freedom, where do you go now?)";
 };
