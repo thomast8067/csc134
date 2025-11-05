@@ -149,8 +149,27 @@ The spit still hurt your feelings though.)" << endl;
 }
 
 void cakeBombs(){
+
+    int choice;
+
     cout << R"(You pull a bomb out of the cake, finally some real power!
 Where should you place it?)";
+
+    showChoices("dummy.",
+                "dummy.",
+                "dummy.");
+
+    choice = getPlayerChoice();
+
+    if (choice == 1) {
+        cout << "dummy";
+    }
+    if (choice == 2) {
+        cout << "dummy";
+    }
+    if (choice == 3) {
+        cout << "dummy";
+    }
 };
 
 void cakePhone(){
@@ -162,7 +181,26 @@ Great.)" << endl;
 };
 
 void cakeKey(){
+
+    int choice;
+
     cout << R"(You pull the skeleton key out of the cake.
 You wait until lights out then you make your move, reaching around the bars and opening the cell.
 With your newfound freedom, where do you go now?)";
+
+    showChoices("dummy.",
+                "dummy.",
+                "dummy.");
+
+    choice = getPlayerChoice();
+
+    if (choice == 1) {
+        cout << "dummy";
+    }
+    if (choice == 2) {
+        cout << "dummy";
+    }
+    if (choice == 3) {
+        cout << "dummy";
+    }
 };
