@@ -141,9 +141,25 @@ The spit still hurt your feelings though.)" << endl;
         cakeBombs();
     }
     if (choice == 2) {
-        cakeKey();
-    }
-    if (choice == 3) {
         cakePhone();
     }
+    if (choice == 3) {
+        cakeKey();
+    }
 }
+
+void cakeBombs(){
+    cout << "hi";
+};
+
+void cakePhone(){
+    cout << R"(You pull the phone out of the cake and- oh the battery's dead.
+And they didn't put a charger in here either.
+Great.)" << endl;
+    sleep(2);
+    failure();
+};
+
+void cakeKey(){
+    cout << "hi";
+};
