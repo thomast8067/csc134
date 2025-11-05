@@ -60,7 +60,35 @@ int main(){
 }
 
 void question1() {
-    cout << "1";
+    
+    string  month1,
+            month2,
+            month3;
+
+    double  rain1,
+            rain2,
+            rain3;
+
+    cout << "Enter month 1: ";
+    cin >> month1;
+    cout << endl;
+    cout << "Enter rainfall for " << month1 << ": ";
+    cin >> rain1;
+    cout << endl;
+
+    cout << "Enter month 2: ";
+    cin >> month2;
+    cout << endl;
+    cout << "Enter rainfall for " << month2 << ": ";
+    cin >> rain2;
+    cout << endl;
+
+    cout << "Enter month 3: ";
+    cin >> month3;
+    cout << endl;
+    cout << "Enter rainfall for " << month3 << ": ";
+    cin >> rain3;
+    cout << endl;
 }
 
 void question2() {
