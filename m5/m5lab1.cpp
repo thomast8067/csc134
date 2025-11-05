@@ -21,6 +21,8 @@ int main(){
     cout << "Testing: Choose 1, 2, or 3." << endl;
     choice = getPlayerChoice(maxChoice);
     cout << "You chose: " << choice << endl;
+
+    return 0;
 }
 
 
