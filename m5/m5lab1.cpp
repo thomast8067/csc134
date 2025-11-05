@@ -23,7 +23,7 @@ void prisonWait();
 void prisonBreakBars();
 void prisonPackage();
 
-void cakeBombs();
+void cakeBomb();
 void cakePhone();
 void cakeKey();
 
@@ -51,7 +51,10 @@ int getPlayerChoice(){
 
 void showChoices(string choice1, string choice2, string choice3){
     
-    cout << "-~-~-MAKE YOUR CHOICE-~-~-" << endl;
+    cout << R"(
+======================
+   MAKE YOUR CHOICE
+======================)" << endl;
 
     int num = 1;
     cout << num << ". " << choice1 << endl;
@@ -72,8 +75,8 @@ void prison(){
 
    int choice;
 
-   cout << R"(You are in prison, sitting on your real bad mattress counting the bricks in the wall.
-But, in your head you've been plotting an epic escape that's due to happen any second now...
+   cout << R"(You're in prison, sitting on a just terrible mattress counting the bricks in the wall.
+But, in your head, you've been plotting a plan for your epic escape that's due to happen any second now...
 what was the first step again?
     )";
 
@@ -117,7 +120,7 @@ void prisonWait(){
 
 void prisonBreakBars(){
     cout << R"(Using your brute strength you punch the bars into smithereens!
-...is what you thought would happen. What actually happened is that you broke your fist. Nice going.)" << endl;
+...is what you thought would happen. What actually happened is that you broke your fist. Nice work.)" << endl;
     sleep(2);
     failure();
 }
@@ -127,18 +130,18 @@ void prisonPackage() {
     int choice;
 
     cout << R"(A guard mosies over to your cell with a box, "Guess you're the birthday boy huh? Enjoy the cake for me."
-The guard opens the box and spits on the cake inside it, then walks away laughing.
-Lucky for you, they don't know you had a friend on the outside sneak something into the pastry.
+The guard opens the box and spits on the cake inside, then walks away laughing.
+Lucky for you, they don't know you have a friend on the outside who snuck something into the pastry.
 The spit still hurt your feelings though.)" << endl;
 
-    showChoices("Take out some bombs.",
-                "Take out a phone.",
-                "Take out a skeleton key.");
+    showChoices("Retrieve the bomb.",
+                "Retrieve the phone.",
+                "Retrieve the skeleton key.");
 
     choice = getPlayerChoice();
 
     if (choice == 1) {
-        cakeBombs();
+        cakeBomb();
     }
     if (choice == 2) {
         cakePhone();
@@ -148,11 +151,11 @@ The spit still hurt your feelings though.)" << endl;
     }
 }
 
-void cakeBombs(){
+void cakeBomb(){
 
     int choice;
 
-    cout << R"(You pull a bomb out of the cake, finally some real power!
+    cout << R"(You pull the bomb out of the cake, finally some real power!
 Where should you place it?)";
 
     showChoices("dummy.",
