@@ -11,20 +11,18 @@ using namespace std;
 
 
 int getPlayerChoice(int maxChoice);
-
+void showChoices(string choice1, string choice2, string choice3);
 
 int main(){
-
     int choice;
     int maxChoice = 3;
 
-    cout << "Testing: Choose 1, 2, or 3." << endl;
+    showChoices("This is choice 1","This is choice 2","This is choice 3");
     choice = getPlayerChoice(maxChoice);
     cout << "You chose: " << choice << endl;
 
     return 0;
 }
-
 
 int getPlayerChoice(int maxChoice){
     int choice;
@@ -39,4 +37,23 @@ int getPlayerChoice(int maxChoice){
         cout << "Please choose between 1 and " << maxChoice << ".\n";
     }
 
+}
+
+void showChoices(string choice1, string choice2, string choice3){
+    
+    cout << "MAKE YOUR CHOICE" << endl;
+
+    int num = 1;
+    cout << num << ". " << choice1 << endl;
+    num++;
+
+    if(choice2 != ""){
+        cout << num << ". " << choice2 << endl;
+        num++;
+    }
+
+    if(choice3 != ""){
+        cout << num << ". " << choice3 << endl;
+        num++;
+    }
 }
