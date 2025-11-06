@@ -14,11 +14,13 @@ void question1();
 void question2();
 void question3();
 void question4();
+void calc4_1();   //calc 1-3 are submenus in question 4
+void calc4_2();
+void calc4_3();
 void question5();
 
 int main(){
-
-    int question_number;
+    int questionNumber;
     bool exit;
 
     exit = false;
@@ -31,13 +33,13 @@ int main(){
         cout << "Question 5: Distance Traveled" << endl;
         cout << "Select a question, or enter 6 to exit: ";
         
-        while (!(cin >> question_number) || question_number < 1 || question_number > 6) {
+        while (!(cin >> questionNumber) || questionNumber < 1 || questionNumber > 6) {
             cout << "Invalid input. Try again: ";
             cin.clear(); // Reset input errors
             cin.ignore(10000, '\n'); // Remove bad input
         }
 
-        switch(question_number){
+        switch(questionNumber){
             case 1:
                 question1();
                 break;
@@ -178,7 +180,50 @@ void question3() {
 }
 
 void question4() {
-    cout << "4";
+    int calcNumber;
+    bool exit;
+
+    exit = false;
+
+    while(exit == false){
+        cout << "1: Calculate the area of a Circle" << endl;
+        cout << "2: Calculate the area of a Rectangle" << endl;
+        cout << "3: Calculate the area of a Triangle" << endl;
+        cout << "Select a question, or enter 4 to exit: ";
+        
+        while (!(cin >> calcNumber) || calcNumber < 1 || calcNumber > 4) {
+            cout << "Invalid input. Try again: ";
+            cin.clear(); // Reset input errors
+            cin.ignore(10000, '\n'); // Remove bad input
+        }
+
+        switch(calcNumber){
+            case 1:
+                calc4_1();
+                break;
+            case 2:
+                calc4_2();
+                break;
+            case 3:
+                calc4_3();
+                break;
+            case 4:
+                exit = true;
+                break;
+        }
+    }
+}
+
+void calc4_1(){
+    cout << "calc1" << endl;
+}
+
+void calc4_2(){
+    cout << "calc2" << endl;
+}
+
+void calc4_3(){
+    cout << "calc3" << endl;
 }
 
 void question5() {
