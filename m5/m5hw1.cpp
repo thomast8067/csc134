@@ -228,9 +228,19 @@ void calc4_1(){
 }
 
 void calc4_2(){
-    double length,
-           width;
-        
+    double  length,
+            width,
+            area;
+
+    cout << "What is the length of the rectangle? ";
+    cin >> length;
+
+    cout << "What is the width of the rectangle? ";
+    cin >> width;
+
+    area = length*width;
+
+    cout << "The area of the rectangle is " << area << "." << endl;
 }
 
 void calc4_3(){
