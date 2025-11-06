@@ -6,6 +6,7 @@ T Thomas
 */
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -71,24 +72,25 @@ void question1() {
 
     cout << "Enter month 1: ";
     cin >> month1;
-    cout << endl;
     cout << "Enter rainfall for " << month1 << ": ";
     cin >> rain1;
-    cout << endl;
 
     cout << "Enter month 2: ";
     cin >> month2;
-    cout << endl;
     cout << "Enter rainfall for " << month2 << ": ";
     cin >> rain2;
-    cout << endl;
 
     cout << "Enter month 3: ";
     cin >> month3;
-    cout << endl;
     cout << "Enter rainfall for " << month3 << ": ";
     cin >> rain3;
-    cout << endl;
+
+    double averageRain = (rain1+rain2+rain3)/3;
+
+    streamsize temp = cout.precision(); // stupid hack stuff to make this not interfere with other questions. idek what this is doing truthfully
+    cout << setprecision(2);
+    cout << "The average rainfall for " << month1 << ", " << month2 << ", and " << month3 << " is " << averageRain << " inches." << endl;
+    cout << setprecision(temp); // this concludes the stupid hack stuff
 }
 
 void question2() {
