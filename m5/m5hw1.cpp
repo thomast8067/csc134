@@ -215,11 +215,22 @@ void question4() {
 }
 
 void calc4_1(){
-    cout << "calc1" << endl;
+    double radius;
+    const double PI = 3.14159;
+    double area;
+
+    cout << "What is the radius of the circle? ";
+    cin >> radius;
+
+    area = PI*(radius*radius);
+
+    cout << "The area of the circle is " << area << "." << endl;
 }
 
 void calc4_2(){
-    cout << "calc2" << endl;
+    double length,
+           width;
+        
 }
 
 void calc4_3(){
