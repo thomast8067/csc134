@@ -131,7 +131,6 @@ void question3() {
     int number;
 
     cout << "Enter a number from 1-10: ";
-    
     while (!(cin >> number) || number < 1 || number > 10) {
         cout << "Invalid input. Try again: ";
         cin.clear(); // Reset input errors
@@ -183,5 +182,32 @@ void question4() {
 }
 
 void question5() {
-    cout << "5";
+    int speed,
+        hours;
+    
+    cout << "What is the speed of the vehicle in mph? ";
+    while (!(cin >> speed) || speed < 0) {
+        cout << "Invalid input. Try again: ";
+        cin.clear(); // Reset input errors
+        cin.ignore(10000, '\n'); // Remove bad input
+    }
+
+    cout << "How many hours has it traveled? ";
+    while (!(cin >> hours) || hours < 1) {
+        cout << "Invalid input. Try again: ";
+        cin.clear(); // Reset input errors
+        cin.ignore(10000, '\n'); // Remove bad input
+    }
+
+    cout << "HOUR\tDISTANCE TRAVELED" << endl;
+    cout << "=======================" << endl;
+    
+    int i = 1;
+    while(i <= hours){
+        int currentHour = i;
+        int currentDistance = i * speed; 
+        
+        cout << currentHour << "\t" << currentDistance << endl;
+        i++;
+    }
 }
