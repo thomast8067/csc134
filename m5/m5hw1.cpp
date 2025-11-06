@@ -244,7 +244,19 @@ void calc4_2(){
 }
 
 void calc4_3(){
-    cout << "calc3" << endl;
+    double  base,
+            height,
+            area;
+
+    cout << "What is the base of the triangle? ";
+    cin >> base;
+
+    cout << "What is the height of the triangle? ";
+    cin >> height;
+
+    area = base*height/2;
+
+    cout << "The area of the triangle is " << area << "." << endl;
 }
 
 void question5() {
