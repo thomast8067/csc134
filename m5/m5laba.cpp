@@ -29,7 +29,11 @@ void health_regen(){
     double blackBars;
 
     cout << "What is your current health? ";
-    cin >> health;
+    while (!(cin >> health) || !(health > 0)) {
+            cout << "Invalid input. Try again: ";
+            cin.clear(); // Reset input errors
+            cin.ignore(10000, '\n'); // Remove bad input
+    }
 
     cout << "What is your max health? ";
     cin >> maxHealth;
