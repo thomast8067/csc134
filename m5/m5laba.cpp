@@ -6,6 +6,7 @@ T Thomas
 */
 
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -20,27 +21,33 @@ int main() {
 
 void health_regen(){
 
-    int health = 30;
-    int max_health = 100;
-    const int HEALING = 10;
+    double health;
+    double maxHealth;
+    const double HEALING = 10;
     
-    int white_bars;
-    int black_bars;
+    double whiteBars;
+    double blackBars;
+
+    cout << "What is your current health? ";
+    cin >> health;
+
+    cout << "What is your max health? ";
+    cin >> maxHealth;
 
     cout << "Resting until healed..." << endl;
 
-    while(health <= max_health){
-        cout << "Health: " << health << "/" << max_health << "\t" ;
+    while(health <= maxHealth){
+        cout << "Your health: " << health << "/" << maxHealth << "\t" ;
         
-        white_bars = health / HEALING;
-        black_bars = (max_health / HEALING) - white_bars;
+        whiteBars = round((health / maxHealth) * 10);
+        blackBars = 10 - whiteBars;
 
-        for (int i = 0; i < white_bars; i++)
+        for (int i = 0; i < whiteBars; i++)
         {
             cout << "█";
         }
 
-        for (int i = 0; i < black_bars; i++)
+        for (int i = 0; i <= blackBars - 1; i++)
         {
             cout << "░";
         }
@@ -48,6 +55,26 @@ void health_regen(){
         cout << endl;
         
         health += HEALING;
+    }
+
+    if(health > maxHealth){
+        health = maxHealth;
+        cout << "Your health: " << health << "/" << maxHealth << "\t" ;
+
+        whiteBars = round((health / maxHealth) * 10);
+        blackBars = 10 - whiteBars;
+
+        for (int i = 0; i < whiteBars; i++)
+        {
+            cout << "█";
+        }
+
+        for (int i = 0; i <= blackBars - 1; i++)
+        {
+            cout << "░";
+        }
+
+        cout << endl;
     }
 
     cout << "Fully rested" << endl;
