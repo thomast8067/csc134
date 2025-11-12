@@ -1,3 +1,10 @@
+/*
+CSC 134
+M6LAB1 - Wet n Wild
+T Thomas
+11/12/25
+*/
+
 #include <iostream>
 #include <vector>
 #include <string>
