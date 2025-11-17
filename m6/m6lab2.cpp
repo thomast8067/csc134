@@ -32,7 +32,8 @@ enum Room {
     KITCHEN = 2,
     GARDEN = 3,
     BASEMENT = 4,
-    NUM_ROOMS = 5
+    SECRET_ROOM = 5,
+    NUM_ROOMS = 6
 };
 
 int main() {
@@ -42,7 +43,8 @@ int main() {
         "Library",
         "Kitchen",
         "Garden",
-        "Basement"
+        "Basement",
+        "Secret Room"
     };
     
     // Room descriptions array
@@ -51,7 +53,8 @@ int main() {
         "Walls lined with ancient books. The air smells of old paper.",
         "A spacious kitchen with an old stove and wooden counter.",
         "An overgrown garden with stone pathways and a small fountain.",
-        "A dark, damp basement with cobwebs in the corners."
+        "A dark, damp basement with cobwebs in the corners.",
+        "A hidden crypt with arcane knowledge lodged in tomes."
     };
     
     // Adjacency list using a 2D array
@@ -73,7 +76,7 @@ int main() {
     connections[ENTRANCE_HALL][WEST] = GARDEN;      // Entrance Hall -> West -> Garden
     
     // Library connections
-    connections[LIBRARY][NORTH] = -1;               // No connection north
+    connections[LIBRARY][NORTH] = SECRET_ROOM;      // Library -> North -> Secret Room
     connections[LIBRARY][EAST] = -1;                // No connection east
     connections[LIBRARY][SOUTH] = ENTRANCE_HALL;    // Library -> South -> Entrance Hall
     connections[LIBRARY][WEST] = -1;                // No connection west
@@ -95,6 +98,12 @@ int main() {
     connections[BASEMENT][EAST] = -1;               // No connection east
     connections[BASEMENT][SOUTH] = -1;              // No connection south
     connections[BASEMENT][WEST] = -1;               // No connection west
+
+    // Secret Room connections
+    connections[SECRET_ROOM][NORTH] = -1;           // No connection east
+    connections[SECRET_ROOM][EAST] = -1;            // No connection east
+    connections[SECRET_ROOM][SOUTH] = LIBRARY;           // Secret Room -> South -> Library
+    connections[SECRET_ROOM][WEST] = -1;            // No connection west
     
     // Game state
     int currentRoom = ENTRANCE_HALL; // Start in the Entrance Hall
@@ -106,6 +115,11 @@ int main() {
         cout << "\nYou are in the " << roomNames[currentRoom] << endl;
         cout << roomDescriptions[currentRoom] << endl;
         
+        // If in basement add lever flavortext
+        if (currentRoom == 4){
+            cout << "You see a lever in the corner." << endl;
+        }
+
         // Show available exits
         cout << "Exits: ";
         bool hasExits = false;
@@ -152,7 +166,12 @@ int main() {
             }
         } else if (command == "quit" || command == "q") {
             gameRunning = false;
-        } else {
+        } else if (currentRoom == 4 && (command == "use lever" || command == "flick lever")) {
+            cout << "You flick the lever and hear a kerthunk somewhere else in the house." << endl;
+            
+        }
+        
+        else {
             cout << "I don't understand that command." << endl;
         }
     }
