@@ -36,6 +36,8 @@ enum Room {
     NUM_ROOMS = 6
 };
 
+bool isLeverFlicked = false;
+
 int main() {
     // Room names array
     string roomNames[NUM_ROOMS] = {
@@ -76,7 +78,7 @@ int main() {
     connections[ENTRANCE_HALL][WEST] = GARDEN;      // Entrance Hall -> West -> Garden
     
     // Library connections
-    connections[LIBRARY][NORTH] = SECRET_ROOM;      // Library -> North -> Secret Room
+    connections[LIBRARY][NORTH] = -1;               // No connection north 
     connections[LIBRARY][EAST] = -1;                // No connection east
     connections[LIBRARY][SOUTH] = ENTRANCE_HALL;    // Library -> South -> Entrance Hall
     connections[LIBRARY][WEST] = -1;                // No connection west
@@ -102,7 +104,7 @@ int main() {
     // Secret Room connections
     connections[SECRET_ROOM][NORTH] = -1;           // No connection east
     connections[SECRET_ROOM][EAST] = -1;            // No connection east
-    connections[SECRET_ROOM][SOUTH] = LIBRARY;           // Secret Room -> South -> Library
+    connections[SECRET_ROOM][SOUTH] = LIBRARY;      // Secret Room -> South -> Library
     connections[SECRET_ROOM][WEST] = -1;            // No connection west
     
     // Game state
@@ -166,14 +168,24 @@ int main() {
             }
         } else if (command == "quit" || command == "q") {
             gameRunning = false;
-        } else if (currentRoom == 4 && (command == "use lever" || command == "flick lever")) {
-            cout << "You flick the lever and hear a kerthunk somewhere else in the house." << endl;
+        } else if (currentRoom == BASEMENT && command == "use") {
+            cout << "Use what? ";
+            string item;
+            cin >> item;
+            if (item == "lever") {
+                cout << "You flick the lever and hear a kerthunk somewhere else in the house." << endl;
+                isLeverFlicked = true;
+            }
             
-        }
-        
-        else {
+        } else {
             cout << "I don't understand that command." << endl;
         }
+
+        // Changing layout after flicking lever
+        if (isLeverFlicked == true) {
+            connections[LIBRARY][NORTH] = SECRET_ROOM; // Library -> North -> Secret Room 
+        }
+
     }
     
     cout << "Thanks for playing!" << endl;
