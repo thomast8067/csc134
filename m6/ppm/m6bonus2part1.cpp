@@ -1,9 +1,11 @@
 /*
 CSC 134
-M6BONUS2 - PPM
+M6BONUS2 - PPM PART 1
 T Thomas
 11/24/25
 */
+
+// "write a simple c++ program to generate a ppm image that is 200x200 that draws a circle"
 
 #include <iostream>
 #include <fstream>
