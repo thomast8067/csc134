@@ -19,7 +19,7 @@ int main() {
     const int centerX = width / 2;
     const int centerY = height / 2;
 
-    std::ofstream image("circle.ppm");
+    std::ofstream image("circlepart2.ppm");
     image << "P3\n" << width << " " << height << "\n255\n";
 
     for (int y = 0; y < height; y++) {
