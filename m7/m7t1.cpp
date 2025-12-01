@@ -8,12 +8,6 @@ T Thomas
 #include <iostream>
 using namespace std;
 
-// CSC 134
-// M7T1 - Restaurant Rating
-// norrisa
-// 4/29/24
-// Use Restaurant class to store user ratings
-
 // Next time we'll put the class in a separate file
 class Restaurant {
   private:
@@ -31,7 +25,10 @@ class Restaurant {
         name = n; 
     }
     void setRating(double r) {
-        rating = r;
+        // only valid ratings
+        if (r >= 0 && r <= 5){
+            rating = r;
+        }
     }
     string getName() const {
         return name;
@@ -45,6 +42,11 @@ class Restaurant {
 int main() {
     cout << "M7T1 - Restaurant Reviews" << endl;
 
-    return 0;
+    Restaurant breakfast = Restaurant("IHOP", 3.5);
+    Restaurant lunch     = Restaurant("Olive Garden", 2.0);
 
+    breakfast.printInfo();
+    lunch.printInfo();
+
+    return 0;
 }
