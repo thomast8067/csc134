@@ -36,6 +36,10 @@ class Restaurant {
     double getRating() const {
         return rating;
     }
+    void printInfo() {
+        cout << "Restaurant Name: " << name << endl;
+        cout << "Rating: " << rating << "/5" << endl;
+    }
   
 };
 
@@ -44,9 +48,11 @@ int main() {
 
     Restaurant breakfast = Restaurant("IHOP", 3.5);
     Restaurant lunch     = Restaurant("Olive Garden", 2.0);
+    Restaurant dinner    = Restaurant("Outback Steakhouse", 4.0);
 
     breakfast.printInfo();
     lunch.printInfo();
+    dinner.printInfo();
 
     return 0;
 }
